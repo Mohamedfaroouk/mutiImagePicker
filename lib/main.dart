@@ -94,15 +94,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Theme.of(context).primaryColor,
                       ),
                       borderRadius: BorderRadius.circular(25)),
-                  child: InkWell(
-                    onTap: () async {
+                  child: IconButton(
+                    onPressed: () async {
                       await handelImages.fetchImages();
                       setState(() {});
                     },
-                    child: CircleAvatar(
-                        radius: 24,
-                        backgroundColor: Colors.white,
-                        child: Icon(Icons.camera_alt)),
+                    icon: Icon(Icons.camera_alt,
+                        color: Theme.of(context).primaryColor),
                   ),
                 ),
               ],
